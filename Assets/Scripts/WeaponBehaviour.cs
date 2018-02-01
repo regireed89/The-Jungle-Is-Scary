@@ -18,7 +18,7 @@ public class WeaponBehaviour : MonoBehaviour, IDamager
 
     public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "Enemy")
             DoDamage(other.gameObject.GetComponent<Enemy_Behaviour>());
     }
 

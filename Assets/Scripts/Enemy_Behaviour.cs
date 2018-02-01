@@ -28,8 +28,7 @@ public class Enemy_Behaviour : MonoBehaviour, IDamager, IDamageable
         {
             transform.position = startPos;
             data.health = 20;
-        }
-            
+        }           
     }
 
     public void OnCollisionEnter(Collision other)
@@ -37,11 +36,8 @@ public class Enemy_Behaviour : MonoBehaviour, IDamager, IDamageable
         if (other.gameObject.tag == "Player")
         {
             DoDamage(other.gameObject.GetComponent<Player_Behaviour>());
-            takeDamageEvent.Raise();
-           
+            takeDamageEvent.Raise();  
         }
-            
-
     }
 
     public void DoDamage(IDamageable defender)
