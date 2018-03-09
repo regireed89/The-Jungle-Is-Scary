@@ -34,10 +34,7 @@ public class Player_Behaviour : MonoBehaviour, IDamageable
         int i = 0;
         if (Input.GetMouseButtonDown(0))
         {
-            attacked = true;
-
-           
-                     
+            attacked = true;                 
         }
 
         switch (currentComboState)
